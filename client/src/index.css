@@ -281,3 +281,28 @@ h1 { max-width: 850px; }
 .timeline-item.experience-card > * { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: no-preference) { .timeline-item.experience-card.scroll-reveal.is-revealed:hover { transform: translateY(-6px) scale(1.008); box-shadow: 0 26px 54px rgba(35,110,148,.18), inset 0 1px rgba(255,255,255,.98); } }
 @media (max-width: 760px) and (prefers-reduced-motion: no-preference) { .timeline { display: grid; gap: 15px; } .timeline-item.experience-card { margin-bottom: 0; } .timeline-item.experience-card.scroll-reveal { animation: none; } .timeline-item.experience-card.scroll-reveal.is-revealed { animation: mobileGlassFloat 5.4s ease-in-out 220ms infinite alternate; } }
+
+.education-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.education-card { position: relative; min-height: 245px; padding: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,.92); border-radius: 24px; background: linear-gradient(145deg, rgba(255,255,255,.82), rgba(203,240,254,.43)); box-shadow: 0 20px 46px rgba(35,110,148,.12), inset 0 1px rgba(255,255,255,.96); backdrop-filter: blur(18px) saturate(150%); }
+.education-card::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(125deg, rgba(255,255,255,.52), transparent 46%, rgba(160,223,248,.13)); }
+.education-card > * { position: relative; z-index: 1; }
+.education-card h3 { max-width: 100%; margin: 11px 0 10px; color: #183f55; font-family: "Palatino Linotype", Georgia, serif; font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -.035em; }
+.education-card p:last-child { max-width: 92%; color: #5d7d8d; line-height: 1.6; }
+.education-mark { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid rgba(255,255,255,.96); border-radius: 14px; color: #26759b; background: rgba(235,250,255,.7); box-shadow: inset 0 1px rgba(255,255,255,1), 0 10px 22px rgba(30,104,141,.1); }
+.education-card .work-number { position: absolute; top: 28px; right: 28px; bottom: auto; left: auto; }
+@media (prefers-reduced-motion: no-preference) { .education-card.scroll-reveal.is-revealed:hover { transform: translateY(-6px) scale(1.008); box-shadow: 0 28px 62px rgba(35,110,148,.2), inset 0 1px rgba(255,255,255,1); } }
+@media (max-width: 760px) { .education-grid { grid-template-columns: 1fr; gap: 14px; } .education-card { min-height: 0; padding: 24px; } .education-card .work-number { position: absolute; top: 24px; right: 24px; bottom: auto; left: auto; } }
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) { .education-card.scroll-reveal { animation: none; } .education-card.scroll-reveal.is-revealed { animation: mobileGlassFloat 5.25s ease-in-out 200ms infinite alternate; } .education-card.scroll-reveal.is-revealed:nth-child(even) { animation-delay: .8s; } }
+
+.creative-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.creative-card { display: grid; grid-template-columns: minmax(160px, .9fr) 1.1fr; overflow: hidden; border: 1px solid rgba(255,255,255,.92); border-radius: 25px; background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(207,241,253,.45)); box-shadow: 0 20px 46px rgba(35,110,148,.12), inset 0 1px rgba(255,255,255,.96); backdrop-filter: blur(18px) saturate(150%); }
+.creative-image { min-height: 235px; overflow: hidden; background: linear-gradient(145deg, #dff6ff, #b9e7f5); }
+.creative-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.23,1,.32,1); }
+.creative-card-1 .creative-image img { object-position: center; }
+.creative-card-2 .creative-image img { object-position: center; }
+.creative-copy { padding: 26px 25px; }
+.creative-copy h3 { margin: 10px 0 9px; color: #183f55; font-family: "Palatino Linotype", Georgia, serif; font-size: clamp(1.38rem, 2.2vw, 1.9rem); letter-spacing: -.035em; }
+.creative-copy p:last-child { color: #5d7d8d; line-height: 1.6; }
+@media (prefers-reduced-motion: no-preference) { .creative-card.scroll-reveal.is-revealed:hover { transform: translateY(-6px) scale(1.008); box-shadow: 0 28px 62px rgba(35,110,148,.2), inset 0 1px rgba(255,255,255,1); } .creative-card:hover .creative-image img { transform: scale(1.06); } }
+@media (max-width: 760px) { .creative-grid { grid-template-columns: 1fr; gap: 14px; } .creative-card { grid-template-columns: minmax(128px, .78fr) 1.22fr; } .creative-image { min-height: 190px; } .creative-copy { padding: 20px; } }
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) { .creative-card.scroll-reveal { animation: none; } .creative-card.scroll-reveal.is-revealed { animation: mobileGlassFloat 5.5s ease-in-out 240ms infinite alternate; } .creative-card.scroll-reveal.is-revealed:nth-child(even) { animation-delay: .9s; } }

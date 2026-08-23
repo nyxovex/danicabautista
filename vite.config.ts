@@ -17,5 +17,8 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
-  server: { host: true },
+  server: {
+    host: true,
+    allowedHosts: [".manus.computer"],
+  },
 });

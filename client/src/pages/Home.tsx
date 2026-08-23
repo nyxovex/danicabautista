@@ -1,9 +1,9 @@
 import { portfolioConfig } from "@/content/portfolio";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { ArrowDown, ArrowUpRight, ChartNoAxesCombined, CheckCircle2, ClipboardList, Layers3, Lightbulb, Mail, Maximize2, Phone, SearchCheck, Sparkles, Target, UsersRound } from "lucide-react";
+import { ArrowDown, ArrowUpRight, ChartNoAxesCombined, CheckCircle2, ClipboardList, GraduationCap, Layers3, Lightbulb, Mail, Maximize2, Megaphone, Phone, SearchCheck, Sparkles, Target, UsersRound } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const projectIcons = [SearchCheck, ChartNoAxesCombined, Lightbulb, Layers3, UsersRound, Target];
+const projectIcons = [SearchCheck, ChartNoAxesCombined, Lightbulb, ClipboardList, UsersRound, Megaphone, Target];
 
 function initials(name: string) {
   return name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase();
@@ -48,7 +48,9 @@ export default function Home() {
         </button>
         <nav id="site-nav" className={menuOpen ? "site-nav open" : "site-nav"} aria-label="Portfolio sections">
           <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="#education" onClick={() => setMenuOpen(false)}>Education</a>
           <a href="#work" onClick={() => setMenuOpen(false)}>Selected work</a>
+          <a href="#creative" onClick={() => setMenuOpen(false)}>Creative work</a>
           <a href="#certificates" onClick={() => setMenuOpen(false)}>Certificates</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
@@ -82,6 +84,13 @@ export default function Home() {
           </ul>
         </section>
 
+        <section id="education" className="education-section section-frame" aria-labelledby="education-title">
+          <div className="section-intro entry"><p className="eyebrow">Education</p><h2 id="education-title">Analytical study, applied with intent.</h2></div>
+          <div className="education-grid">
+            {config.education.map((item, index) => <article className="education-card entry scroll-reveal" key={item.title}><div className="education-mark" aria-hidden="true"><GraduationCap size={20} /></div><span className="work-number">0{index + 1}</span><p className="timeline-meta">{item.meta}</p><h3>{item.title}</h3><p>{item.body}</p></article>)}
+          </div>
+        </section>
+
         <section id="experience" className="experience-section section-frame" aria-labelledby="experience-title">
           <div className="section-intro entry"><p className="eyebrow">Experience</p><h2 id="experience-title">Learning through practical, collaborative settings.</h2></div>
           <div className="timeline">
@@ -96,6 +105,13 @@ export default function Home() {
               const WorkIcon = projectIcons[index % projectIcons.length];
               return <article className={`work-card entry scroll-reveal work-card-${index + 1}`} key={`${project.title}-${project.meta}`}><div className="work-mark" aria-hidden="true"><WorkIcon size={20} /></div><p className="timeline-meta">{project.meta}</p><h3>{project.title}</h3><p>{project.body}</p><span className="work-number">0{index + 1}</span></article>;
             })}
+          </div>
+        </section>
+
+        <section id="creative" className="creative-section section-frame" aria-labelledby="creative-title">
+          <div className="section-intro entry"><p className="eyebrow">Creative work</p><h2 id="creative-title">Visual thinking, explored with care.</h2></div>
+          <div className="creative-grid">
+            {config.creativeWork.map((item, index) => <article className={`creative-card entry scroll-reveal creative-card-${index + 1}`} key={item.title}><div className="creative-image"><img src={item.image} alt={item.alt} /></div><div className="creative-copy"><p className="timeline-meta">{item.meta}</p><h3>{item.title}</h3><p>{item.body}</p></div></article>)}
           </div>
         </section>
 
