@@ -11,7 +11,7 @@ export const portfolioConfig = {
   skills: ["Excel-based analysis & simulation", "Data & SQL foundations", "Market research & insight", "Commercial awareness", "Stakeholder communication", "Team leadership & organisation"],
   education: [
     { title: "BA Business Management with Placement Year", meta: "University of Sheffield · September 2024–present", body: "First-year weighted average of 84.8%, with First-Class Honours predicted. Relevant study includes Business Intelligence and Analysis for Decision-Making, using Qlik and Excel-based data analysis." },
-    { title: "International Baccalaureate Diploma Programme", meta: "Brent International School Manila · August 2022–May 2024", body: "Final score of 34 points, with Higher Level subjects recorded as equivalent to AAB at A levels." },
+    { title: "International Baccalaureate Diploma Programme", meta: "Brent International School, Baguio, Philippines · August 2022–May 2024", body: "Final score of 34 points, with Higher Level subjects recorded as equivalent to AAB at A levels." },
   ],
   experience: [
     { title: "Spring Internship Experience", meta: "University of Sheffield · 13–17 April 2026", body: "Worked in a multidisciplinary team on a consultancy project set by OCU Group, developing research, critical-thinking, interpersonal, and knowledge-application skills." },
@@ -35,7 +35,7 @@ export const portfolioConfig = {
     { title: "Business simulation challenge", date: "November 2025 – Feb 2026", meta: "Universities Business Challenge · Round 1 & Round 2 (Semi-finals)", body: "Led a team representing the University of Sheffield, completing Round 1 and progressing to Round 2 (Semi-finals) of a competitive business simulation that developed structured commercial decision-making and team-based planning.", supportingDocument: null },
   ],
   creativeWork: [
-    { title: "The Watchdog — Student News Visual Identity", meta: "Logo draft · Brent International School, Baguio, Philippines", body: "Created an original student-newspaper logo draft that combines a bold wordmark with a custom watchdog mascot treatment.", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/QUOtXqCLDRBVtsmF.png", alt: "The Watchdog student-news visual identity logo draft with an illustrated watchdog mascot" },
+    { title: "The Watchdog — Student News Visual Identity", meta: "Logo draft · Brent International School, Baguio, Philippines", body: "Created an original student-newspaper logo draft that combines a bold wordmark with a custom watchdog mascot treatment.", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/ZPEgYUOCwJjiVIQj.webp", alt: "The Watchdog student-news visual identity logo draft with an illustrated watchdog mascot" },
     { title: "IB art exhibition render", meta: "International Baccalaureate Artworks · Brent International School, Baguio, Philippines", body: "Produced a virtual-gallery render presenting a curated collection of original artworks as a coherent exhibition environment.", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/OkDIexPyVnQPfjhz.png", alt: "Virtual-gallery render showing a curated International Baccalaureate art exhibition by a Brent International School student" },
   ],
   certificates: [

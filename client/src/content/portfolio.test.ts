@@ -35,4 +35,15 @@ describe("static portfolio content", () => {
     expect(portfolioConfig.creativeWork[0].meta).toContain("Baguio, Philippines");
     expect(portfolioConfig.creativeWork[1].meta).toContain("Baguio, Philippines");
   });
+
+  it("uses the approved Baguio education location and Watchdog visual replacement without changing Watchdog copy", () => {
+    expect(portfolioConfig.education[1].meta).toContain("Brent International School, Baguio, Philippines");
+    expect(portfolioConfig.creativeWork[0]).toMatchObject({
+      title: "The Watchdog — Student News Visual Identity",
+      meta: "Logo draft · Brent International School, Baguio, Philippines",
+      body: "Created an original student-newspaper logo draft that combines a bold wordmark with a custom watchdog mascot treatment.",
+      alt: "The Watchdog student-news visual identity logo draft with an illustrated watchdog mascot",
+    });
+    expect(portfolioConfig.creativeWork[0].image).toContain("ZPEgYUOCwJjiVIQj.webp");
+  });
 });
