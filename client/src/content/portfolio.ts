@@ -3,14 +3,14 @@ export const portfolioConfig = {
   eyebrow: "Business Management · Data foundations · Student leadership",
   headline: "A considered start to meaningful work.",
   introduction: "I am a Business Management undergraduate who enjoys turning curiosity into practical contribution. My early experience combines data foundations, market research, student leadership, process simulation, and collaborative consultancy work.",
-  availability: "Open to thoughtful opportunities and collaboration.",
+  availability: "Seeking graduate opportunities.",
   email: "bdanica538@gmail.com",
   phone: "+44 7415 367 484",
   location: "United Kingdom",
   stylePreset: "aqua",
   skills: ["Excel-based analysis & simulation", "Data & SQL foundations", "Market research & insight", "Commercial awareness", "Stakeholder communication", "Team leadership & organisation"],
   education: [
-    { title: "BA Business Management", meta: "University of Sheffield · September 2024–present", body: "First-year weighted average of 84.8%, with First-Class Honours predicted. Relevant study includes Business Intelligence and Analysis for Decision-Making, using Qlik and Excel-based data analysis." },
+    { title: "BA Business Management with Placement Year", meta: "University of Sheffield · September 2024–present", body: "First-year weighted average of 84.8%, with First-Class Honours predicted. Relevant study includes Business Intelligence and Analysis for Decision-Making, using Qlik and Excel-based data analysis." },
     { title: "International Baccalaureate Diploma Programme", meta: "Brent International School Manila · August 2022–May 2024", body: "Final score of 34 points, with Higher Level subjects recorded as equivalent to AAB at A levels." },
   ],
   experience: [
@@ -22,7 +22,7 @@ export const portfolioConfig = {
   achievements: [
     { title: "Education Awards 2025/26", meta: "University of Sheffield · Student contribution to Education", body: "Recognised through a nomination for student contribution to education, reflecting feedback gathering, staff–student communication, peer advocacy, and positive faculty-level change." },
     { title: "Student Staff Partnership Award", meta: "Sheffield Students’ Union · Academic Reps", body: "Received the Student Staff Partnership Award, recognising constructive partnership and contribution within the student academic-representation community." },
-    { title: "Universities Business Challenge", meta: "Round 1 · 2025–26", body: "Completed Round 1 of the Universities Business Challenge, a business simulation focused on analytical thinking, commercial awareness, planning, and teamwork." },
+    { title: "Universities Business Challenge", meta: "November 2025 – Feb 2026 · Round 1 & Round 2 (Semi-finals)", body: "Led a team representing the University of Sheffield, completing Round 1 and progressing to Round 2 (Semi-finals) of this business simulation focused on analytical thinking, commercial awareness, planning, and teamwork." },
     { title: "Introduction to Data and SQL", meta: "Code First Girls · October 2025", body: "Completed introductory training in data and SQL, building a sound foundation for working confidently with structured information." },
   ],
   projects: [
@@ -31,15 +31,15 @@ export const portfolioConfig = {
     { title: "Operations process-improvement simulation", date: "April 2026", meta: "MGT253 · University of Sheffield", body: "Used Microsoft Excel simulations to map work-in-progress, test throughput and capacity scenarios, identify process bottlenecks, and develop evidence-based improvement recommendations.", supportingDocument: null },
     { title: "International HRM strategy analysis", date: "May 2026", meta: "MGT226 · University of Sheffield", body: "Evaluated standardisation, localisation, and hybridisation approaches to international HRM, using academic frameworks and case evidence to assess global and local decision-making.", supportingDocument: null },
     { title: "Consumer & market analysis", date: "May 2026", meta: "MGT233 · University of Sheffield", body: "Produced an in-depth marketing analysis of Buldak pouch noodles in the US market, examining competition, consumer behaviour, marketing mix, segmentation, targeting, positioning, and digital promotion.", supportingDocument: null },
-    { title: "Better World Collab campaign pitch", date: "July 2026", meta: "Mock campaign pitch · Internship Experience UK with British Airways", body: "BA Better World Collab campaign pitch developed around creator partnership, digital content, social media, process planning, and measurable engagement goals for inclusion and self-expression.", supportingDocument: null },
-    { title: "Business simulation challenge", date: "2025–26 academic year", meta: "Universities Business Challenge · Round 1", body: "Took part in a competitive business-simulation experience, developing a structured approach to commercial decisions and team-based planning.", supportingDocument: null },
+    { title: "BA Better World Collab campaign pitch", date: "July 2026", meta: "Mock campaign pitch · Internship Experience UK with British Airways", body: "Created a BA Better World Collab campaign pitch around creator partnership, digital content, social media, process planning, and measurable engagement goals for inclusion and self-expression.", supportingDocument: null },
+    { title: "Business simulation challenge", date: "November 2025 – Feb 2026", meta: "Universities Business Challenge · Round 1 & Round 2 (Semi-finals)", body: "Led a team representing the University of Sheffield, completing Round 1 and progressing to Round 2 (Semi-finals) of a competitive business simulation that developed structured commercial decision-making and team-based planning.", supportingDocument: null },
   ],
   creativeWork: [
-    { title: "The Watchdog identity concept", meta: "Independent visual-design work", body: "Created an original student-newspaper logo draft that combines a bold wordmark with a custom watchdog mascot treatment.", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/QUOtXqCLDRBVtsmF.png", alt: "The Watchdog student newspaper logo concept with an illustrated watchdog mascot" },
-    { title: "IB art exhibition render", meta: "International Baccalaureate Artworks", body: "Produced a virtual-gallery render presenting a curated collection of original artworks as a coherent exhibition environment.", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/OkDIexPyVnQPfjhz.png", alt: "Virtual-gallery render showing a curated International Baccalaureate art exhibition" },
+    { title: "The Watchdog — Student News Visual Identity", meta: "Logo draft · Brent International School, Baguio, Philippines", body: "Created an original student-newspaper logo draft that combines a bold wordmark with a custom watchdog mascot treatment.", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/QUOtXqCLDRBVtsmF.png", alt: "The Watchdog student-news visual identity logo draft with an illustrated watchdog mascot" },
+    { title: "IB art exhibition render", meta: "International Baccalaureate Artworks · Brent International School, Baguio, Philippines", body: "Produced a virtual-gallery render presenting a curated collection of original artworks as a coherent exhibition environment.", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/OkDIexPyVnQPfjhz.png", alt: "Virtual-gallery render showing a curated International Baccalaureate art exhibition by a Brent International School student" },
   ],
   certificates: [
-    { title: "Universities Business Challenge", detail: "Round 1 · 2025–26", issuer: "Universities Business Challenge Worldwide", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/XnxITCrFmjwdufIt.png", alt: "Universities Business Challenge Round 1 certificate awarded to Danica Bautista" },
+    { title: "Universities Business Challenge", detail: "Round 1 certificate · November 2025 – Feb 2026", issuer: "Universities Business Challenge Worldwide", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/XnxITCrFmjwdufIt.png", alt: "Universities Business Challenge Round 1 certificate awarded to Danica Bautista" },
     { title: "Introduction to Data and SQL", detail: "Completed · October 2025", issuer: "Code First Girls", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/QSyJrglyBSVvqkgZ.png", alt: "Code First Girls Introduction to Data and SQL certificate awarded to Danica Bautista" },
     { title: "Student Observation of Teaching", detail: "Participant · 2025/2026", issuer: "University of Sheffield", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/WYBoDAGxsBUDMwRE.png", alt: "University of Sheffield Student Observation of Teaching certificate for Danica Bautista" },
     { title: "Spring Internship Experience", detail: "13–17 April 2026", issuer: "University of Sheffield", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663730720797/aUtlzSqdGIFrUrUS.png", alt: "University of Sheffield Spring Internship Experience certificate for Danica Bautista" },
