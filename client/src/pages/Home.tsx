@@ -1,6 +1,6 @@
 import { portfolioConfig } from "@/content/portfolio";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { ArrowDown, ArrowUpRight, ChartNoAxesCombined, CheckCircle2, ClipboardList, GraduationCap, Layers3, Lightbulb, Mail, Maximize2, Megaphone, Phone, SearchCheck, Sparkles, Target, UsersRound } from "lucide-react";
+import { ArrowDown, ArrowUpRight, ChartNoAxesCombined, CheckCircle2, ClipboardList, FileText, GraduationCap, Layers3, Lightbulb, Mail, Maximize2, Megaphone, Phone, SearchCheck, Sparkles, Target, UsersRound } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const projectIcons = [SearchCheck, ChartNoAxesCombined, Lightbulb, ClipboardList, UsersRound, Megaphone, Target];
@@ -103,7 +103,7 @@ export default function Home() {
           <div className="work-grid">
             {config.projects.map((project, index) => {
               const WorkIcon = projectIcons[index % projectIcons.length];
-              return <article className={`work-card entry scroll-reveal work-card-${index + 1}`} key={`${project.title}-${project.meta}`}><div className="work-mark" aria-hidden="true"><WorkIcon size={20} /></div><p className="timeline-meta">{project.meta}</p><h3>{project.title}</h3><p>{project.body}</p><span className="work-number">0{index + 1}</span></article>;
+              return <article className={`work-card entry scroll-reveal work-card-${index + 1}`} key={`${project.title}-${project.meta}`}><div className="work-mark" aria-hidden="true"><WorkIcon size={20} /></div><p className="timeline-meta">{project.meta}</p><time className="work-date" dateTime={project.date}>{project.date}</time><h3>{project.title}</h3><p>{project.body}</p>{project.supportingDocument ? <a className="supporting-document" href={project.supportingDocument} target="_blank" rel="noreferrer"><FileText size={15} aria-hidden="true" /> View supporting document <ArrowUpRight size={14} aria-hidden="true" /></a> : <span className="supporting-document is-unavailable"><FileText size={15} aria-hidden="true" /> Supporting material available on request</span>}<span className="work-number">0{index + 1}</span></article>;
             })}
           </div>
         </section>
@@ -118,17 +118,17 @@ export default function Home() {
         <section className="achievements-section section-frame" aria-labelledby="achievements-title">
           <div className="section-intro entry"><p className="eyebrow">Recognition & learning</p><h2 id="achievements-title">Progress made visible.</h2></div>
           <div className="achievement-list">
-            {config.achievements.map((item) => <article className="achievement entry scroll-reveal" key={`${item.title}-${item.meta}`}><div><p className="timeline-meta">{item.meta}</p><h3>{item.title}</h3></div><p>{item.body}</p><ArrowUpRight size={19} aria-hidden="true" /></article>)}
+            {config.achievements.map((item) => <article className="achievement entry scroll-reveal" key={`${item.title}-${item.meta}`}><div><p className="timeline-meta">{item.meta}</p><h3>{item.title}</h3></div><p>{item.body}</p></article>)}
           </div>
         </section>
 
         <section id="certificates" className="certificates-section section-frame" aria-labelledby="certificates-title">
-          <div className="section-intro entry"><p className="eyebrow">Verified credentials</p><div><h2 id="certificates-title">Every milestone, kept in view.</h2><p className="certificate-intro">A considered record of accredited learning, university participation, and practical experience.</p></div></div>
+          <div className="section-intro entry"><p className="eyebrow">Credentials</p><div><h2 id="certificates-title">Every milestone, kept in view.</h2><p className="certificate-intro">A considered record of accredited learning, university participation, and practical experience.</p></div></div>
           <div className="certificate-grid">
             {config.certificates.map((certificate, index) => <article className={`certificate-card entry certificate-card-${index + 1}`} key={certificate.title}>
               <button type="button" className="certificate-preview-trigger" onClick={() => setSelectedCertificate(certificate)} aria-label={`Preview ${certificate.title} certificate`}>
                 <div className="certificate-visual"><div className="certificate-glare" aria-hidden="true" /><img src={certificate.image} alt={certificate.alt} /></div>
-                <div className="certificate-copy"><p className="timeline-meta">{certificate.issuer}</p><h3>{certificate.title}</h3><div className="certificate-foot"><span>{certificate.detail}</span><span className="certificate-status"><CheckCircle2 size={14} aria-hidden="true" /> Verified</span></div><span className="preview-certificate"><Maximize2 size={14} aria-hidden="true" /> Open full certificate</span></div>
+                <div className="certificate-copy"><p className="timeline-meta">{certificate.issuer}</p><h3>{certificate.title}</h3><div className="certificate-foot"><span>{certificate.detail}</span></div><span className="preview-certificate"><Maximize2 size={14} aria-hidden="true" /> Open full certificate</span></div>
               </button>
             </article>)}
           </div>

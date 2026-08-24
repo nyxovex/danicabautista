@@ -1,22 +1,25 @@
-# Clean GitHub Pages Replacement
+# GitHub Pages Backup and Clean Installation
 
-This package contains one workflow only: `.github/workflows/deploy.yml`. It builds the portfolio and publishes the `dist` folder. Do **not** create or keep `.github/workflows/static.yml`, because that workflow publishes the repository files and shows this README instead of the portfolio.
+This backup contains the complete static portfolio source and one tested GitHub Pages workflow: `.github/workflows/deploy.yml`. The workflow installs the project’s own declared pnpm version, runs tests and type checks, builds the Vite site, and deploys the generated `dist` folder.
 
-## Replace the old files
+> Do **not** create or keep `.github/workflows/static.yml`. That generic workflow uploads the repository root, which causes GitHub Pages to show the README instead of the portfolio.
 
-1. On GitHub, open the repository **nyxovex/danicabautista**.
-2. Open the `.github` folder, then `workflows`, then the file named `static.yml`.
-3. Click the bin / **Delete this file** button. Write `remove wrong Pages workflow` as the message, then commit the deletion.
-4. Return to the repository’s main **Code** page.
-5. Delete the remaining old project files, or use GitHub Desktop to replace them with the extracted files from this package. Keep the repository name unchanged.
-6. Upload every file and folder from this fresh package, including the hidden `.github` folder. GitHub’s web uploader can include it if the extracted package is selected as a whole.
-7. Commit the upload to the `main` branch.
+## Recommended installation: GitHub Desktop
 
-## Turn on the correct publication method
+GitHub Desktop preserves hidden folders automatically, so this is the simplest long-term method. Create an empty GitHub repository, clone it with GitHub Desktop, copy **all** extracted backup files into the cloned folder, then commit and push. The included `.github/workflows/deploy.yml` will be pushed correctly.
 
-1. Open **Settings**, then **Pages**.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Open the **Actions** tab. Wait for **Deploy static portfolio to GitHub Pages** to finish with a green tick.
-4. Open `https://nyxovex.github.io/danicabautista/` and refresh once. The glassmorphic portfolio should appear instead of this documentation page.
+## Website-only installation: GitHub in a browser
+
+GitHub's browser upload does not reliably include hidden folders such as `.github`. Use the following process:
+
+1. Create a new empty GitHub repository. Keep the default branch named `main`.
+2. Extract this backup ZIP file. Upload and commit all the **visible** files and folders, such as `client`, `package.json`, and `README.md`. Do not upload the ZIP itself.
+3. On GitHub, select **Add file → Create new file**.
+4. Name the new file exactly `.github/workflows/deploy.yml`.
+5. Open the visible `DEPLOY-WORKFLOW-COPY.md` file in the backup, copy the YAML content from its code block, and paste it into GitHub's editing area.
+6. Commit the new workflow file directly to `main`.
+7. Open **Settings → Pages** and set **Source** to **GitHub Actions**.
+8. Open the **Actions** tab. Wait for **Deploy static portfolio to GitHub Pages** to finish with a green tick.
+9. Open `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY-NAME/`. It may take a short time to update after the green tick appears.
 
 The portfolio is public. Its visible email address, phone number, and certificate previews will be accessible to visitors.
